@@ -1,6 +1,6 @@
 -- Create 'rounds' table
 CREATE TABLE rounds (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     user_id BIGINT NOT NULL,
     course_id BIGINT NOT NULL,
     started_at TIMESTAMP NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE rounds (
 
 -- Create 'hole_score' table
 CREATE TABLE hole_score (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     hole_number INT NOT NULL,
     strokes INT NOT NULL,
     putts INT,
@@ -26,7 +26,7 @@ CREATE TABLE hole_score (
 
 -- Create 'handicap_history' table
 CREATE TABLE handicap_history (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     user_id BIGINT NOT NULL,
     effective_date TIMESTAMP NOT NULL,
     handicap_before DOUBLE PRECISION NOT NULL,
